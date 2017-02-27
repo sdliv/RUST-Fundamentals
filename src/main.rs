@@ -1,17 +1,21 @@
 /*
-    FUNCTION POINTERS
+    PRIMITIVE TYPES:
+    bool: represents boolean, true or false
+    char: represents a single unicode scalar value. char is 4 bytes in Rust, not just 1
+
+    NUMERIC TYPES:
+    Categories of numeric types:
+    1. signed and unsigned
+    2. fixed and variable
+    3. floating-point and integer
 */
 
 fn main() {
-    let f: fn(i32) -> i32 = plus_one; // Without type inference
-    let g = plus_one; // With type inference
+    let x = true; // type inference
+    let y: bool = false; // without type inference
 
-    let seven = f(6);
-    let eight = g(7);
-    println!("using the function f(6) = {}\nusing the function g(7) = {}", seven, eight);
+    let char_1 = 'x';
+    let two_hearts = '💕';
 
-}
-
-fn plus_one(i: i32) -> i32 {
-    i + 1
+    println!("Here are both chars: {} and the two hearts: {}", char_1, two_hearts);
 }
