@@ -1,10 +1,20 @@
 fn main() {
-    // Scope and shadowing
-    let x: i32 = 17;
+    // Shadowing
+    let x: i32 = 8;
     {
-        let y: i32 = 3;
-        println!("The value of x is {} and the value of y is {}", x, y);
+        println!("{}", x); // Prints "8".
+        let x = 12;
+        println!("{}", x); // Prints "12".
     }
-    println!("The value of x is {} and the value of y is {}", x, y); // This will not work due to y being out of scope
+    println!("{}", x); // Prints "12".
+    let x = 42;
+    println!("{}", x); // Prints "42".
+
+    let mut y: i32 = 1;
+    y = 7; // y is now the value of 7
+    let y = y; // 'y' is now immutable and is bound to '7';
+
+    let z = 4;
+    let z = "I can also be bound to text!"; // 'y' is now of a different type, due to the 'let' rebinding of 'z'
 
 }
