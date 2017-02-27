@@ -11,11 +11,13 @@
 */
 
 fn main() {
-    let x = true; // type inference
-    let y: bool = false; // without type inference
+    // Arrays: they are immutable by default, can be made mutable, can hold type, and limits be set
 
-    let char_1 = 'x';
-    let two_hearts = '💕';
+    let a = [1,2,3]; // a:[i32; 3]
+    let mut m = [1,2,3]; // m:[i32; 3]
+    let c = [0; 20];  // short hand initializing of an array of 20 elements, all set to 0
+    let names = ["Sean", "Nicole", "Joanna", "Adoniah"]; // names: [&str; 3]
 
-    println!("Here are both chars: {} and the two hearts: {}", char_1, two_hearts);
+    println!("The length of array c, is: {}", c.len());
+    println!("The second name in the 'names' array is: {}", names[1]);
 }
